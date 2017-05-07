@@ -1,0 +1,11 @@
+<div *ngIf="hero != null">
+  <h2>{{hero.name}} details!</h2>
+  <div>
+    <label>id: </label>{{hero.id}}</div>
+  <div>
+    <label>name: </label>
+    <input #nameChangeInput (keyup.enter)="nameChange(nameChangeInput.value)" placeholder="name" />
+    <button (click)="nameChange(nameChangeInput.value)">Update name</button>
+  </div>
+  <button (click)="goBack()">Back</button>
+</div>
